@@ -1,0 +1,148 @@
+| +--cuda
+| | +--bin
+| | +--include
+| | +--lib
+| | +--NVIDIA_SLA_cuDNN_Support.txt
+| +--cuda_11.1.1_456.81_win10.exe
+| +--cudnn-11.3-windows-x64-v8.2.1.32.zip
+| +--mmdeploy
+| | +--.clang-format
+| | +--.eggs
+| | +--.git
+| | +--.github
+| | +--.gitignore
+| | +--.gitmodules
+| | +--.idea
+| | +--.pre-commit-config.yaml
+| | +--.pylintrc
+| | +--.readthedocs.yml
+| | +--build
+| | +--CITATION.cff
+| | +--cmake
+| | +--cmake-build-debug
+| | +--CMakeLists.txt
+| | +--cmd.bat
+| | +--configs
+| | +--csrc
+| | +--data
+| | +--demo
+| | +--docker
+| | +--docs
+| | +--LICENSE
+| | +--MANIFEST.in
+| | +--mmdeploy
+| | +--mmdeploy.egg-info
+| | +--out_cuda0.pkl
+| | +--README.md
+| | +--README_zh-CN.md
+| | +--requirements
+| | +--requirements.txt
+| | +--resources
+| | +--setup.cfg
+| | +--setup.py
+| | +--tests
+| | +--third_party
+| | +--tools
+| +--mmdetection
+| | +--.circleci
+| | +--.dev_scripts
+| | +--.git
+| | +--.github
+| | +--.gitignore
+| | +--.owners.yml
+| | +--.pre-commit-config.yaml
+| | +--.readthedocs.yml
+| | +--checkpoints
+| | +--CITATION.cff
+| | +--cmd.txt
+| | +--configs
+| | +--demo
+| | +--docker
+| | +--docs
+| | +--LICENSE
+| | +--MANIFEST.in
+| | +--model-index.yml
+| | +--pytest.ini
+| | +--README.md
+| | +--README_zh-CN.md
+| | +--requirements
+| | +--requirements.txt
+| | +--resources
+| | +--setup.cfg
+| | +--setup.py
+| | +--tests
+| | +--tools
+| | +--work_dirs
+| +--onnxruntime-win-x64-1.8.1
+| | +--CodeSignSummary-fb899ed4-a93a-4d27-972f-7f79b566cff6.md
+| | +--GIT_COMMIT_ID
+| | +--include
+| | +--lib
+| | +--LICENSE
+| | +--Privacy.md
+| | +--README.md
+| | +--ThirdPartyNotices.txt
+| | +--VERSION_NUMBER
+| +--onnxruntime-win-x64-1.8.1.zip
+| +--opencv
+| | +--build
+| | +--LICENSE.txt
+| | +--LICENSE_FFMPEG.txt
+| | +--README.md.txt
+| | +--sources
+| +--opencv-4.5.5-vc14_vc15.exe
+| +--ppl.cv
+| | +--.clang-format
+| | +--.git
+| | +--.github
+| | +--.gitignore
+| | +--build.bat
+| | +--build.sh
+| | +--cmake
+| | +--CMakeLists.txt
+| | +--deps
+| | +--docs
+| | +--include
+| | +--LICENSE
+| | +--pplcv-build
+| | +--README.md
+| | +--src
+| +--spdlog-1.9.2
+| | +--.clang-format
+| | +--.clang-tidy
+| | +--.gitattributes
+| | +--.gitignore
+| | +--.travis.yml
+| | +--appveyor.yml
+| | +--bench
+| | +--build
+| | +--cmake
+| | +--CMakeLists.txt
+| | +--example
+| | +--include
+| | +--INSTALL
+| | +--LICENSE
+| | +--logos
+| | +--README.md
+| | +--scripts
+| | +--src
+| | +--tests
+| +--spdlog-1.9.2.zip
+| +--TensorRT-8.2.3.0
+| | +--bin
+| | +--data
+| | +--doc
+| | +--graphsurgeon
+| | +--include
+| | +--lib
+| | +--onnx_graphsurgeon
+| | +--python
+| | +--samples
+| | +--uff
+| +--TensorRT-8.2.3.0.Windows10.x86_64.cuda-11.4.cudnn8.2.zip
+| +--work_dir
+| | +--deploy.json
+| | +--detail.json
+| | +--end2end.engine
+| | +--end2end.onnx
+| | +--pipeline.json
