@@ -1,0 +1,6 @@
+[submodule "third_party/mmdeploy"]
+	path = third_party/mmdeploy
+	url = git@github.com:DeepBlue97/mmdeploy.git
+[submodule "third_party/mmdetection"]
+	path = third_party/mmdetection
+	url = git@github.com:DeepBlue97/mmdetection.git
