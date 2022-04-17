@@ -58,3 +58,57 @@ python tools/test.py `
     --model E:\workspace\win10\lab_mmdeploy/work_dir/end2end.engine `
     --out out_cuda0.pkl `
     --device cuda:0 `
+
+
+yolox nano coco person only
+fp16
+python tools/test.py `
+    D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy\configs\mmdet\detection\detection_tensorrt-fp16_dynamic-320x320-1344x1344.py `
+    D:\workspace\deep_learning\mmdeploy_yolox\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+    --out out_cuda0.pkl `
+    --model D:\workspace\deep_learning\mmdeploy_yolox\work_dir_fp16\end2end.engine `
+    --device cuda:0 `
+
+yolox nano coco person only
+fp32
+python tools/test.py `
+    D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+    D:\workspace\deep_learning\mmdeploy_yolox\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+    --out out_cuda0.pkl `
+    --model D:\workspace\deep_learning\mmdeploy_yolox\work_dir_fp32\end2end.engine `
+    --device cuda:0 `
+
+
+python tools/test.py `
+  --work-dir
+  --out
+  --gpu-id
+
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --work-dir WORK_DIR   the directory to save the file containing evaluation metrics
+  --out OUT             output result file in pickle format
+  --fuse-conv-bn        Whether to fuse conv and bn, this will slightly increasethe inference speed
+  --gpu-ids GPU_IDS [GPU_IDS ...]
+                        (Deprecated, please use --gpu-id) ids of gpus to use (only applicable to non-distributed training)
+  --gpu-id GPU_ID       id of gpu to use (only applicable to non-distributed testing)
+  --format-only         Format the output results without perform evaluation. It isuseful when you want to format the result to a specific format and submit it to the test server
+  --eval EVAL [EVAL ...]
+                        evaluation metrics, which depends on the dataset, e.g., "bbox", "segm", "proposal" for COCO, and "mAP", "recall" for PASCAL VOC
+  --show                show results
+  --show-dir SHOW_DIR   directory where painted images will be saved
+  --show-score-thr SHOW_SCORE_THR
+                        score threshold (default: 0.3)
+  --gpu-collect         whether to use gpu to collect results.
+  --tmpdir TMPDIR       tmp directory used for collecting results from multiple workers, available when gpu-collect is not specified
+  --cfg-options CFG_OPTIONS [CFG_OPTIONS ...]
+                        override some settings in the used config, the key-value pair in xxx=yyy format will be merged into config file. If the value to be overwritten is a list, it should be like key="[a,b]" or key=a,b It also allows
+                        nested list/tuple values, e.g. key="[(a,b),(c,d)]" Note that the quotation marks are necessary and that no white space is allowed.
+  --options OPTIONS [OPTIONS ...]
+                        custom options for evaluation, the key-value pair in xxx=yyy format will be kwargs for dataset.evaluate() function (deprecate), change to --eval-options instead.
+  --eval-options EVAL_OPTIONS [EVAL_OPTIONS ...]
+                        custom options for evaluation, the key-value pair in xxx=yyy format will be kwargs for dataset.evaluate() function
+  --launcher {none,pytorch,slurm,mpi}
+                        job launcher
+  --local_rank LOCAL_RANK
