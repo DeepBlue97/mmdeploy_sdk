@@ -4,7 +4,7 @@
 2. 使用系统公用的（非conda安装）CUDA 11.1最新版
 3. 使用 conda安装pytorch 1.8.2， 然后pip uninstall cudatoolkit（切记！！） （1.8.0好像安装mmcv-full==1.4.0时会失败）
 4. opencv env: $env:path = "D:\workspace\deep_learning\mmdeploy_yolox\opencv\build;" + $env:path
-
+5. 2060s成功转换推理fp32; 3060失败，可能还不支持30系显卡
 
 编译SDK：
 
@@ -29,9 +29,50 @@ cmake --install . --config Release
 
 转换命令：
 
+双2060S
 
+fp32
+```
+python `
+E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
+E:\workspace\win10\lab_mmdeploy/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy/work_dir_fp32 `
+--dump-info `
+--device cuda:0 `
+```
+fp16
+```
+python `
+E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt-fp16_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
+E:\workspace\win10\lab_mmdeploy/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy/work_dir_fp16 `
+--dump-info `
+--device cuda:0 `
 ```
 
+int8  校准数据集默认为验证集
+```
+python `
+E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt-int8_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+E:\workspace\win10\lab_mmdeploy\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
+E:\workspace\win10\lab_mmdeploy/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy/work_dir_int8 `
+--dump-info `
+--device cuda:0 `
+```
+
+DELL G15
+
+fp32
+```
 python `
 D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy/tools/deploy.py `
 D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
@@ -41,7 +82,9 @@ D:\workspace\deep_learning\mmdeploy_yolox/demo.jpg `
 --work-dir D:\workspace\deep_learning\mmdeploy_yolox/work_dir_fp32 `
 --dump-info `
 --device cuda:0 `
-
+```
+fp32 mmdeploy_yolox_cu111_torch182_mmcv146
+```
 python `
 D:\workspace\deep_learning\mmdeploy_yolox_cu111_torch182_mmcv146\mmdeploy/tools/deploy.py `
 D:\workspace\deep_learning\mmdeploy_yolox_cu111_torch182_mmcv146\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
