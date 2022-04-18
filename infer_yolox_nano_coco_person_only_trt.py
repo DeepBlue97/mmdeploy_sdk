@@ -19,13 +19,15 @@ backend_files = [r'E:\workspace\win10\lab_mmdeploy\work_dir_fp32\end2end.engine'
 model_cfg = r'E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py'
 deploy_cfg = r'E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt-fp16_dynamic-320x320-1344x1344.py'
 backend_files = [r'E:\workspace\win10\lab_mmdeploy\work_dir_fp16\end2end.engine']
+# int8  successful with: win10 2060s torch182 mmcv146 mmdet2.22.0-peter_custom
+model_cfg = r'E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py'
+deploy_cfg = r'E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt-int8_dynamic-320x320-1344x1344.py'
+backend_files = [r'E:\workspace\win10\lab_mmdeploy\work_dir_int8\end2end.engine']
+
 
 img = r'E:\workspace\win10\lab_mmdeploy\demo.jpg'
 device = 'cuda:0'
+# 首次调用inference_model会较慢
 result = inference_model(model_cfg, deploy_cfg, backend_files, img=img, device=device)
 
 print(result)
-
-
-
-

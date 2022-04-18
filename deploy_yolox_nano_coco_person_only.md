@@ -2,7 +2,7 @@
 
 1. windows 11 系统， vs2019 community版
 2. 使用系统公用的（非conda安装）CUDA 11.1最新版
-3. 使用 conda安装pytorch 1.8.2， 然后pip uninstall cudatoolkit（切记！！） （1.8.0好像安装mmcv-full==1.4.0时会失败）
+3. 使用 pip安装pytorch 1.8.2 即可，如果设置了pip镜像源则会有加速效果，  （1.8.0好像安装mmcv-full==1.4.0时会失败）
 4. opencv env: $env:path = "D:\workspace\deep_learning\mmdeploy_yolox\opencv\build;" + $env:path
 5. 2060s成功转换推理fp32; 3060失败，可能还不支持30系显卡
 
