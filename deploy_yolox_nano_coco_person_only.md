@@ -31,6 +31,23 @@ cmake --install . --config Release
 
 双2060S
 
+lenet: have not deploy convert, it seems pointless
+
+fp32 
+```
+python `
+E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmcls\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy\mmclassification\configs\lenet/lenet_mnist.py `
+E:\workspace\win10\lab_mmdeploy\mmclassification\work_dirs\mnist\latest.pth `
+E:\workspace\win10\lab_mmdeploy/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy/work_dir_lenet_fp32 `
+--dump-info `
+--device cuda:0 `
+```
+
+yolox
+
 fp32
 ```
 python `
