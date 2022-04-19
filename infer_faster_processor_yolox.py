@@ -1,11 +1,12 @@
-
-
-
-import re
-from mmdeploy.apis import build_task_processor
-import torch
-from mmdeploy.utils import get_input_shape, load_config
 import time
+
+import torch
+from mmdeploy.apis import build_task_processor
+from mmdeploy.utils import get_input_shape, load_config
+
+"""
+infer more faster then "from mmdeploy.apis import inference_model"
+"""
 
 # FP16  successful with: win10 2060s torch182 mmcv146 mmdet2.22.0-peter_custom
 model_cfg = r'E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py'
