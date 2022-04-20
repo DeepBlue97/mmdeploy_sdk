@@ -51,12 +51,12 @@ yolox
 fp32
 ```
 python `
-E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
-E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
-E:\workspace\win10\lab_mmdeploy\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
-E:\workspace\win10\lab_mmdeploy\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
-E:\workspace\win10\lab_mmdeploy/demo.jpg `
---work-dir E:\workspace\win10\lab_mmdeploy/work_dir_fp32 `
+E:\workspace\win10\lab_mmdeploy_v4\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
+E:\workspace\win10\lab_mmdeploy_v4/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy_v4/work_dir_fp32 `
 --dump-info `
 --device cuda:0 `
 ```
