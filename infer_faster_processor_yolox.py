@@ -13,7 +13,7 @@ model_cfg = r'E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\yolox/yolox
 deploy_cfg = r'E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\detection\detection_tensorrt-fp16_dynamic-320x320-1344x1344.py'
 device = 'cuda:0'
 backend_files = [r'E:\workspace\win10\lab_mmdeploy_v4\work_dir_fp32\end2end.engine']
-img = r'E:\workspace\win10\lab_mmdeploy_v4\demo.jpg'
+img = r'E:\workspace\win10\lab_mmdeploy_v4\el.png'
 
 print('start load config ...')
 deploy_cfg, model_cfg = load_config(deploy_cfg, model_cfg)
