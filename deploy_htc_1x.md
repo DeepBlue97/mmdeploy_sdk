@@ -13,7 +13,22 @@
 
 htc: mmdeploy v0.4.0 did not support htc
 
-fp32 
+fp32 mmdeploy v4
+
+```
+python `
+E:\workspace\win10\lab_mmdeploy_v4\mmdeploy/tools/deploy.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\htc\htc_r50_fpn_1x_coco.py `
+E:\workspace\win10\lab_mmdeploy_v4\mmdetection\checkpoints\epoch_1_htc.pth `
+E:\workspace\win10\lab_mmdeploy_v4/demo.jpg `
+--work-dir E:\workspace\win10\lab_mmdeploy_v4/work_dir_htc_fp32 `
+--dump-info `
+--device cuda:0 `
+```
+
+fp32 v3
+
 ```
 python `
 E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
