@@ -8,7 +8,7 @@
 6. 安装成功案例：conda torch1.8.2 + py37 + mmdeploy v0.3.0 + pip install mmcv1.4.0 == convert and infer with trt backend successful! 
 7. 不需要删除conda中的cudatoolkit（系统cuda为11.1）
 8. 失败案例：conda torch1.8.2 + py38 + mmdeploy v0.4.0 + pip install mmcv1.4.8 == build successful + convert and infer faild! 
-
+9. 安装成功案例：conda torch1.8.2 + py38 + mmdeploy v0.3.0 + pip install mmcv1.4.8 == convert and infer with trt backend successful! 
 
 编译SDK：
 

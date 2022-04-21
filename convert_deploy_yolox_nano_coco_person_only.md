@@ -61,18 +61,32 @@ E:\workspace\win10\lab_mmdeploy/demo.jpg `
 
 DELL G15
 
-fp32
+yolox_tiny_8x8_300e_coco_person_only fp32 
 ```
 python `
-D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy/tools/deploy.py `
-D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
-D:\workspace\deep_learning\mmdeploy_yolox\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py `
-D:\workspace\deep_learning\mmdeploy_yolox\mmdetection\checkpoints\best_bbox_mAP_epoch_299.pth `
-D:\workspace\deep_learning\mmdeploy_yolox/demo.jpg `
---work-dir D:\workspace\deep_learning\mmdeploy_yolox/work_dir_fp32 `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdeploy/tools/deploy.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdetection\configs\yolox/yolox_tiny_8x8_300e_coco_person_only.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdetection\checkpoints\yolox_tiny_coco_person_only_299e.pth `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3/demo.jpg `
+--work-dir D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3/work_dir_yolox_tiny_person_only_fp32 `
 --dump-info `
 --device cuda:0 `
 ```
+yolox_large_8x8_300e_coco_person_only fp32 
+```
+python `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdeploy/tools/deploy.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdeploy\configs\mmdet\detection\detection_tensorrt_dynamic-320x320-1344x1344.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdetection\configs\yolox/yolox_l_8x8_300e_coco_person_only.py `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3\mmdetection\checkpoints\yolox_large_coco_person_only_e296.pth `
+D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3/demo.jpg `
+--work-dir D:\workspace\deep_learning\lab_mmdeploy_condatorch_v3/work_dir_yolox_large_person_only_fp32 `
+--dump-info `
+--device cuda:0 `
+```
+
+
 fp32 mmdeploy_yolox_cu111_torch182_mmcv146
 ```
 python `
