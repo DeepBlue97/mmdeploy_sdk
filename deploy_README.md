@@ -5,6 +5,8 @@
 3. 使用 pip安装pytorch 1.8.2 即可，如果设置了pip镜像源则会有加速效果，  （1.8.0好像安装mmcv-full==1.4.0时会失败）
 4. opencv env: $env:path = "D:\workspace\deep_learning\mmdeploy_yolox\opencv\build;" + $env:path
 5. 2060s成功转换推理fp32; 3060失败，可能还不支持30系显卡
+6. 安装成功案例：conda torch1.8.2 + py37 + mmdeploy v0.3.0 + pip install mmcv1.4.0  = successful! 不需要删除conda中的cudatoolkit（系统cuda为11.1）
+
 
 编译SDK：
 
