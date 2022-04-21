@@ -29,3 +29,6 @@ $env:PPLCV_DIR = "$pwd"
 """
 
 
+import os
+
+os.environ['path'] = r'E:\workspace\win10\lab_mmdeploy\cuda\bin;' + os.environ['path']

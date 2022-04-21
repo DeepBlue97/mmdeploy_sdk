@@ -1,4 +1,7 @@
 import time
+import os
+
+os.environ['path'] = r'E:\workspace\win10\lab_mmdeploy\cuda\bin;' + os.environ['path']
 
 import torch
 from mmdeploy.apis import build_task_processor
@@ -13,7 +16,7 @@ infer more faster then "from mmdeploy.apis import inference_model"
 # deploy_cfg = r'E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py'
 model_cfg = r'E:\workspace\win10\lab_mmdeploy_v3\mmdetection\configs\mask_rcnn\mask_rcnn_r50_fpn_1x_coco.py'
 deploy_cfg = r'E:\workspace\win10\lab_mmdeploy_v3\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py'
-backend_files = [r'E:\workspace\win10\lab_mmdeploy_v4\work_dir_mask_rcnn_fp32\end2end.engine']
+backend_files = [r'E:\workspace\win10\lab_mmdeploy\work_dir_mask_rcnn_fp32\end2end.engine']
 
 img = r'E:\workspace\win10\lab_mmdeploy\el.png'
 device = 'cuda:0'
