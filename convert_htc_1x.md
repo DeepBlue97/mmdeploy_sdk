@@ -1,7 +1,7 @@
 
 转换命令：
 
-双2060S
+# 双2060S
 
 htc: mmdeploy v0.4.0 did not support htc
 
@@ -9,7 +9,7 @@ fp32 mmdeploy v4
 
 ```
 python `
-E:\workspace\win10\lab_mmdeploy_v4\mmdeploy/tools/deploy.py `
+E:/workspace\win10\lab_mmdeploy_v4\mmdeploy/tools/deploy.py `
 E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
 E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\htc\htc_r50_fpn_1x_coco.py `
 E:\workspace\win10\lab_mmdeploy_v4\mmdetection\checkpoints\epoch_1_htc.pth `
@@ -73,7 +73,7 @@ E:\workspace\win10\lab_mmdeploy/demo.jpg `
 --device cuda:0 `
 ```
 
-DELL G15
+# DELL G15
 
 fp32
 ```
@@ -142,3 +142,19 @@ python tools/test.py `
 
 ```
 
+# ubuntu 3060 12g
+
+fp32 
+```
+
+python \
+tools/deploy.py \
+configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344.py \
+../mmdetection/configs/htc/htc_r50_fpn_1x_coco.py \
+../mmdetection/work_dirs/htc_r50_fpn_1x_coco/latest.pth \
+../mmdetection/data/coco/val2017/000000009769.jpg \
+--work-dir work_dir_htc_r50_fpn_1x_coco_fp32 \
+--dump-info \
+--device cuda:0 \
+
+```
