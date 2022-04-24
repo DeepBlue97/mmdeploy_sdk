@@ -16,3 +16,17 @@ configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344.py \
 
 ```
 
+sdk_folder cascade_mask_rcnn_r50_fpn_1x_coco
+
+```
+python \
+mmdeploy/tools/deploy.py \
+mmdeploy/configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344.py \
+mmdetection/configs/cascade_rcnn/cascade_mask_rcnn_r50_fpn_1x_coco.py \
+mmdetection/work_dirs/cascade_mask_rcnn_r50_fpn_1x_coco/latest.pth \
+mmdetection/data/coco/val2017/000000009769.jpg \
+--work-dir work_dir_cascade_mask_rcnn_r50_fpn_1x_coco_fp32 \
+--dump-info \
+--device cuda:0 \
+
+```
