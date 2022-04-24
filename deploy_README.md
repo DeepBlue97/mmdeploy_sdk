@@ -30,3 +30,12 @@ cmake --build . --config Release -- /m
 cmake --install . --config Release
 
 ```
+
+linux conda install 
+
+```
+conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+conda install pytorch==1.8.2 torchvision cudatoolkit=11.1 -c pytorch -c conda-forge
+
+pip install mmcv-full==1.4.8 -f https://download.openmmlab.com/mmcv/dist/${cu_version}/${torch_version}/index.html
+```
