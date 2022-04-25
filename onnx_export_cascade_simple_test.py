@@ -58,8 +58,7 @@ def simple_test(self, x, proposal_list, img_metas, rescale=False):
         # split batch bbox prediction back to each image
         cls_score = bbox_results['cls_score']
         bbox_pred = bbox_results['bbox_pred']
-        num_proposals_per_img = tuple(
-            len(proposals) for proposals in proposal_list)
+        num_proposals_per_img = tuple(len(proposals) for proposals in proposal_list)
         rois = rois.split(num_proposals_per_img, 0)
         cls_score = cls_score.split(num_proposals_per_img, 0)
         if isinstance(bbox_pred, torch.Tensor):
