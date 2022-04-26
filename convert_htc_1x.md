@@ -5,37 +5,26 @@
 
 htc: mmdeploy v0.4.0 did not support htc
 
-fp32 mmdeploy v4
+fp32
 
 ```
+
 python `
-E:/workspace\win10\lab_mmdeploy_v4\mmdeploy/tools/deploy.py `
-E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
-E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\htc\htc_r50_fpn_1x_coco.py `
-E:\workspace\win10\lab_mmdeploy_v4\mmdetection\checkpoints\epoch_1_htc.pth `
-E:\workspace\win10\lab_mmdeploy_v4/demo.jpg `
---work-dir E:\workspace\win10\lab_mmdeploy_v4/work_dir_htc_fp32 `
+tools/deploy.py `
+configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
+..\mmdetection\configs\htc\htc_r50_fpn_1x_coco.py `
+..\mmdetection\work_dirs\htc_r50_fpn_1x_coco\epoch_11.pth `
+../demo.jpg `
+--work-dir work_dir_htc_r50_fpn_1x_coco_fp32 `
 --dump-info `
 --device cuda:0 `
-```
 
-fp32 v3
-
-```
-python `
-E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
-E:\workspace\win10\lab_mmdeploy\mmdeploy\configs\mmdet\instance-seg\instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
-E:\workspace\win10\lab_mmdeploy\mmdetection\configs\htc\htc_r50_fpn_1x_coco.py `
-E:\workspace\win10\lab_mmdeploy\mmdetection\checkpoints\epoch_1_htc.pth `
-E:\workspace\win10\lab_mmdeploy/demo.jpg `
---work-dir E:\workspace\win10\lab_mmdeploy/work_dir_htc_fp32 `
---dump-info `
---device cuda:0 `
 ```
 
 yolox
 
 fp32
+
 ```
 python `
 E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
@@ -47,7 +36,9 @@ E:\workspace\win10\lab_mmdeploy/demo.jpg `
 --dump-info `
 --device cuda:0 `
 ```
+
 fp16
+
 ```
 python `
 E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
@@ -61,6 +52,7 @@ E:\workspace\win10\lab_mmdeploy/demo.jpg `
 ```
 
 int8  校准数据集默认为验证集
+
 ```
 python `
 E:\workspace\win10\lab_mmdeploy\mmdeploy/tools/deploy.py `
@@ -76,6 +68,7 @@ E:\workspace\win10\lab_mmdeploy/demo.jpg `
 # DELL G15
 
 fp32
+
 ```
 python `
 D:\workspace\deep_learning\mmdeploy_yolox\mmdeploy/tools/deploy.py `
@@ -87,7 +80,9 @@ D:\workspace\deep_learning\mmdeploy_yolox/demo.jpg `
 --dump-info `
 --device cuda:0 `
 ```
+
 fp32 mmdeploy_yolox_cu111_torch182_mmcv146
+
 ```
 python `
 D:\workspace\deep_learning\mmdeploy_yolox_cu111_torch182_mmcv146\mmdeploy/tools/deploy.py `
@@ -102,6 +97,7 @@ D:\workspace\deep_learning\mmdeploy_yolox_cu111_torch182_mmcv146/demo.jpg `
 ```
 
 fp16，耗时较长
+
 ```
 
 python `
@@ -117,6 +113,7 @@ D:\workspace\deep_learning\mmdeploy_yolox/demo.jpg `
 ```
 
 int8
+
 ```
 
 python `
@@ -132,6 +129,7 @@ D:\workspace\deep_learning\mmdeploy_yolox/demo.jpg `
 ```
 
 测试引擎
+
 ```
 python tools/test.py `
     E:\workspace\win10\lab_mmdeploy\mmdeploy/configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344.py `
@@ -144,7 +142,8 @@ python tools/test.py `
 
 # ubuntu 3060 12g
 
-fp32 
+fp32
+
 ```
 
 python \
