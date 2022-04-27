@@ -9,8 +9,8 @@ python `
 tools/deploy.py `
 configs/mmcls/classification_tensorrt_static-32x32.py `
 ../mmclassification/configs/lenet/lenet5_pubgpos.py `
-../mmclassification\work_dirs\pubgpos/epoch_5.pth `
-../dog32x32.png `
+../mmclassification\work_dirs\pubgpos/latest.pth `
+../dog32x32.jpg `
 --work-dir work_dir_lenet5_pubgpos_fp32 `
 --dump-info `
 --device cuda:0 `
