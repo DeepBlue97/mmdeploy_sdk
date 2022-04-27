@@ -3,6 +3,7 @@
 
 lenet5 pubgpos
 
+fp32
 ```
 
 python `
@@ -16,6 +17,21 @@ configs/mmcls/classification_tensorrt_static-32x32.py `
 --device cuda:0 `
 
 ```
+
+fp16
+```
+python `
+tools/deploy.py `
+configs/mmcls/classification_tensorrt-fp16_static-32x32.py `
+../mmclassification/configs/lenet/lenet5_pubgpos.py `
+../mmclassification\work_dirs\pubgpos/latest.pth `
+../dog32x32.jpg `
+--work-dir work_dir_lenet5_pubgpos_fp16 `
+--dump-info `
+--device cuda:0 `
+
+```
+
 
 lenet5 pubgpos
 
