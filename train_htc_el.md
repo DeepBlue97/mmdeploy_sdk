@@ -22,6 +22,8 @@ configs/htc/htc_r50_fpn_1x_el.py \
 8 \
 --cfg-options data.samples_per_gpu=10 data.workers_per_gpu=4 \
 optimizer.lr=0.002 \
+opencv_num_threads=1 \
+
 
 resnet 101  ok
 
