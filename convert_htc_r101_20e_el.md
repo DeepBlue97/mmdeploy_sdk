@@ -18,20 +18,30 @@ configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.
 
 ```
 
-4batch
-
+4-16batch
 ```
-
 python \
 tools/deploy.py \
-configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit_4batch.py \
+configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit_4-16batch.py \
 ../mmdetection/configs/htc/htc_r101_fpn_20e_el.py \
 ../mmdetection/work_dirs/htc_r101_fpn_20e_el/epoch_20.pth \
 ../mmdetection/work_dirs/htc_r101_fpn_20e_el/03AEL_2030E3EDFD_90_3_EL-KXD.png \
---work-dir work_dirs/htc_r101_fpn_20e_el_4batch_fp32 \
+--work-dir work_dirs/htc_r101_fpn_20e_el_4-16batch_fp32 \
 --dump-info \
 --device cuda:0 \
+```
 
+fp16
+```
+python \
+tools/deploy.py \
+configs/mmdet/instance-seg/instance-seg_tensorrt-fp16_dynamic-320x320-1344x1344_8bit_4batch.py \
+../mmdetection/configs/htc/htc_r101_fpn_20e_el.py \
+../mmdetection/work_dirs/htc_r101_fpn_20e_el/epoch_20.pth \
+../mmdetection/work_dirs/htc_r101_fpn_20e_el/03AEL_2030E3EDFD_90_3_EL-KXD.png \
+--work-dir work_dirs/htc_r101_fpn_20e_el_4_16batch_fp16 \
+--dump-info \
+--device cuda:0 \
 ```
 
 测试引擎
