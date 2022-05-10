@@ -3,6 +3,7 @@
 
 fp32
 
+
 ```
 
 python \
@@ -12,6 +13,22 @@ configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.
 ../mmdetection/work_dirs/htc_r101_fpn_20e_el/epoch_20.pth \
 ../mmdetection/work_dirs/htc_r101_fpn_20e_el/03AEL_2030E3EDFD_90_3_EL-KXD.png \
 --work-dir work_dirs/htc_r101_fpn_20e_el_fp32 \
+--dump-info \
+--device cuda:0 \
+
+```
+
+4batch
+
+```
+
+python \
+tools/deploy.py \
+configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit_4batch.py \
+../mmdetection/configs/htc/htc_r101_fpn_20e_el.py \
+../mmdetection/work_dirs/htc_r101_fpn_20e_el/epoch_20.pth \
+../mmdetection/work_dirs/htc_r101_fpn_20e_el/03AEL_2030E3EDFD_90_3_EL-KXD.png \
+--work-dir work_dirs/htc_r101_fpn_20e_el_4batch_fp32 \
 --dump-info \
 --device cuda:0 \
 
