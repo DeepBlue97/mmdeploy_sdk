@@ -44,9 +44,9 @@ fp16
 python tools/test.py \
 configs/mmdet/instance-seg/instance-seg_tensorrt-fp16_dynamic-320x320-1344x1344_8bit_4batch.py \
 ../mmdetection/configs/htc/htc_r101_fpn_20e_el.py \
---model work_dirs/htc_r101_fpn_20e_el_4_16batch_fp16/end2end.engine \
+--model work_dirs/htc_r101_fpn_20e_el_2_6batch_fp16/end2end.engine \
 --device cuda:0 \
---out work_dirs/htc_r101_fpn_20e_el_4_16batch_fp16/result.pickle \
+--out work_dirs/htc_r101_fpn_20e_el_2_6batch_fp16/result.pickle \
 --speed-test \
---log2file work_dirs/htc_r101_fpn_20e_el_4_16batch_fp16/result.log \
---show-dir work_dirs/htc_r101_fpn_20e_el_4_16batch_fp16/show \
+--log2file work_dirs/htc_r101_fpn_20e_el_2_6batch_fp16/result.log \
+--show-dir work_dirs/htc_r101_fpn_20e_el_2_6batch_fp16/show \
