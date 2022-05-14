@@ -9,11 +9,11 @@ infer more faster then "from mmdeploy.apis import inference_model"
 """
 
 # FP16  successful with: win10 2060s torch182 mmcv146 mmdet2.22.0-peter_custom
-model_cfg = r'E:\workspace\win10\lab_mmdeploy_v4\mmdetection\configs\yolox/yolox_nano_8x8_300e_coco_person_only.py'
-deploy_cfg = r'E:\workspace\win10\lab_mmdeploy_v4\mmdeploy\configs\mmdet\detection\detection_tensorrt-fp16_dynamic-320x320-1344x1344.py'
+model_cfg = '../mmdetection/configs/htc/htc_r50_fpn_1x_el.py'
+deploy_cfg = '../mmdeploy/configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.py'
 device = 'cuda:0'
-backend_files = [r'E:\workspace\win10\lab_mmdeploy_v4\work_dir_fp32\end2end.engine']
-img = r'E:\workspace\win10\lab_mmdeploy_v4\el.png'
+backend_files = ['../mmdeploy/work_dirs/htc_r50_fpn_1x_el_fp32/end2end.engine']
+img = '../mmdeploy/data/el/train2017/01Aap_EL_20109BECAE_90_3_EL-KXD.png'
 
 print('start load config ...')
 deploy_cfg, model_cfg = load_config(deploy_cfg, model_cfg)
