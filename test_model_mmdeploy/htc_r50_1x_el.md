@@ -1,4 +1,3 @@
-fp32 test success!
 
 python tools/test.py \
 configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.py \
