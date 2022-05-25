@@ -46,7 +46,7 @@ with torch.no_grad():
     for cls_idx, cls in enumerate(result[0]):
         if len(cls):
             for bbox_idx, bbox in enumerate(cls):
-                if bbox[4] < 0.01:  # 置信度大于0.01才参与计算
+                if bbox[4] < 0.2:  # 置信度大于0.01才参与计算
                     np.delete(result[0][cls_idx], bbox_idx)
                     # result[0][cls_idx].remove(bbox)
                     result_del_bbox_count += 1
@@ -55,7 +55,7 @@ with torch.no_grad():
     for cls_idx, cls in enumerate(result_torch[0]):
         if len(cls):
             for bbox_idx, bbox in enumerate(cls):
-                if bbox[4] < 0.01:  # 置信度大于0.01才参与计算
+                if bbox[4] < 0.2:  # 置信度大于0.01才参与计算
                     np.delete(result_torch[0][cls_idx], bbox_idx)
                     # result_torch[0][cls_idx].remove(bbox)
                     result_torch_del_bbox_count += 1
@@ -66,8 +66,7 @@ with torch.no_grad():
     for cls_idx, cls in enumerate(result[0]):
         if len(cls):
             for bbox_idx, bbox in enumerate(cls):
-                if bbox[4] > 0.01:  # 置信度大于0.01才参与计算
-                    print(bbox-result_torch[0][cls_idx][bbox_idx])
+                print(bbox-result_torch[0][cls_idx][bbox_idx])
 
 print('finish infer')
 
