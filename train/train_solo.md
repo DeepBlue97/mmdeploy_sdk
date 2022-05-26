@@ -2,7 +2,7 @@ linux single gpu
 
 python ./tools/train.py \
 configs/solo/decoupled_solo_r50_fpn_3x_coco.py \
---cfg-options data.samples_per_gpu=1 data.workers_per_gpu=2 \
+--cfg-options data.samples_per_gpu=1 data.workers_per_gpu=1 \
 
 
 linux 2 gpus
