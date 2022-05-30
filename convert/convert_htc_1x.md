@@ -20,7 +20,7 @@ configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.
 --device cuda:0 `
 ```
 
-linux:
+linux 8bit:
 ```
 python \
 tools/deploy.py \
@@ -29,6 +29,19 @@ configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344_8bit.
 ../mmdetection/work_dirs/htc_r50_fpn_1x_el/latest.pth \
 ../mmdetection/data/el/train2017/01Aap_EL_20109BECAE_90_3_EL-KXD.png \
 --work-dir work_dirs/htc_r50_fpn_1x_el_fp32 \
+--dump-info \
+--device cuda:0 \
+```
+
+linux 24bit:
+```
+python \
+tools/deploy.py \
+configs/mmdet/instance-seg/instance-seg_tensorrt_dynamic-320x320-1344x1344.py \
+../mmdetection/work_dirs/htc_r50_fpn_1x_coco_gray2/htc_r50_fpn_1x_coco_gray2.py \
+../mmdetection/work_dirs/htc_r50_fpn_1x_coco_gray2/latest.pth \
+../mmdetection/data/el/train2017/01Aap_EL_20109BECAE_90_3_EL-KXD.png \
+--work-dir work_dirs/htc_r50_fpn_1x_coco_gray2 \
 --dump-info \
 --device cuda:0 \
 ```
