@@ -1,0 +1,46 @@
+defect:
+  WZFH:
+    level:
+      A:
+        logic: AND
+        items:
+          -
+            metas:
+              # 面积比例
+              area_ratio: [0., 0.1]
+              # 灰度
+              grayscale: [0., 50.]
+      B:
+        logic: AND
+        items:
+  HB:
+    level:
+      A:
+        logic: OR
+        items:
+          -
+            logic: AND
+            items:
+              -
+                metas:
+                  grayscale: [0., 20.]
+          -
+            logic: AND
+            items:
+              -
+                logic: AND
+                items:
+                  -
+                    metas:
+                      area_mm: [0., 15.0]
+                      number: [0, 3]
+              -
+                logic: AND
+                items:
+                  -
+                    metas:
+                      area_mm: [0., 3.]
+                      number: [0, 6]
+      B:
+        logic: AND
+        items:
